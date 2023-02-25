@@ -5,10 +5,11 @@
     "node": ">=18 <19"
   },
   "scripts": {
-    "server": "ng serve && node backend/src/index.js",
-    "frontend": "ng serve --open --port 3000",
+    "server": "node backend/src/index.js",
+    "frontend": "ng serve",
+    "service": "npm run server && npm run frontend",
     "ng": "ng",
-    "start": "npm install && npm run build",
+    "start": "npm install",
     "build": "ng build",
     "test": "jest tests/backend.test.js",
     "lint": "ng lint"
