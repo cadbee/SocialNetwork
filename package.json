@@ -1,10 +1,13 @@
 {
   "name": "my-angular",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=18 <19"
+  },
   "scripts": {
-    "server": "node ./backend/index.js",
+    "server": "node backend/src/index.js",
     "ng": "ng",
-    "start": "ng serve --open --port 3000",
+    "start": "npm install && npm run build",
     "build": "ng build",
     "test": "jest tests/backend.test.js",
     "lint": "ng lint"

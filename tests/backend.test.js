@@ -1,4 +1,4 @@
-const {getUser, getUsers, getUserInf, getUsersInf} = require('../backend/routes/routes');
+const {getUser, getUsers, getUserInf, getUsersInf} = require('../backend/src/routes/routes');
 
 test('Get User test', async () => {
   expect(getUser(5)).toHaveProperty('id', 5);

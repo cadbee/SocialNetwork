@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const path = require("path");
 var user_inf = require('../json/userinf.json');
 var pass = require('../json/pass.json');
 var getJSON = require('get-json')
 
-const controller = require('../controllers/routes');
 const users = require("../json/users.json");
 const fs = require("fs");
 
@@ -49,7 +49,6 @@ router.get('/', function (req, res, next) {
   users.forEach((v, i) => {
     getJSON("https://api.thecatapi.com/v1/images/search", function (error, response) {
       v.img = response[0].url;
-      console.log(i, v.img);
     });
     getJSON("https://v2.jokeapi.dev/joke/Any?format=joke&type=single", function (error, response) {
       user_inf[i].joke = response.joke;
@@ -58,8 +57,8 @@ router.get('/', function (req, res, next) {
       user_inf[i].about = response[0];
     });
   });
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\userinf.json', JSON.stringify(user_inf, 0, 2));
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\users.json', JSON.stringify(users, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/userinf.json'), JSON.stringify(user_inf, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/users.json'), JSON.stringify(users, 0, 2));
 });
 
 router.get('/site/:id', (req, res) => {
@@ -104,21 +103,19 @@ router.post('/site/:id', (req, res, next) => {
   if (Object.keys(req.body).includes("joke")) {
     user_inf[id - 1].joke = req.body.joke;
     user_inf[id - 1].about = req.body.about;
-    fs.writeFileSync('C:\\node\\lab4\\backend\\json\\userinf.json', JSON.stringify(user_inf, 0, 2));
+    fs.writeFileSync(path.resolve(__dirname, '../json/userinf.json'), JSON.stringify(user_inf, 0, 2));
   }
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\users.json', JSON.stringify(users, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/users.json'), JSON.stringify(users, 0, 2));
 });
 
 router.post('/site/:id/addfriends', (req, res, next) => {
   const id = Number(req.params.id);
-  console.log(req.body.id);
   users[id-1].friends = users[id - 1].friends.concat([req.body.id]);
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\users.json', JSON.stringify(users, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/users.json'), JSON.stringify(users, 0, 2));
 });
 
 router.post('/site/:id/delfriends', (req, res, next) => {
   const id = Number(req.params.id);
-  console.log(req.body.id);
   let new_arr = [];
   for (let item of users[id - 1].friends){
     console.log(item);
@@ -126,9 +123,8 @@ router.post('/site/:id/delfriends', (req, res, next) => {
       new_arr.push(item);
     }
   }
-  console.log('na', new_arr);
   users[id-1].friends = new_arr;
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\users.json', JSON.stringify(users, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/users.json'), JSON.stringify(users, 0, 2));
 });
 
 router.put('/site', function (req, res) {
@@ -157,9 +153,9 @@ router.put('/site', function (req, res) {
     login: data.login,
     pass: data.password
   }
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\users.json', JSON.stringify(users, 0, 2));
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\userinf.json', JSON.stringify(user_inf, 0, 2));
-  fs.writeFileSync('C:\\node\\lab4\\backend\\json\\pass.json', JSON.stringify(pass, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/users.json'), JSON.stringify(users, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/userinf.json'), JSON.stringify(user_inf, 0, 2));
+  fs.writeFileSync(path.resolve(__dirname, '../json/pass.json'), JSON.stringify(pass, 0, 2));
 });
 
 module.exports = {router, getUser, getUsers, getUserInf, getUsersInf};
