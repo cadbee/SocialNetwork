@@ -1,0 +1,111 @@
+<html>
+  <body>
+  <div class="page-container">
+    <div class="container">
+      <div class="side-bar">
+        <div class="img-container">
+          <img class="img1" src="{{user.img}}">
+          <img *ngIf="editPos" class="overlay" (click)="editImgPos=!editImgPos" src="../../../assets/pencil.png">
+        </div>
+        <div id="ct0" *ngIf="editImgPos">
+          <p [contentEditable]="editPos">{{user.img}}</p>
+        </div>
+        <div id="ct1" class="cite1">
+          <q [contentEditable]="editPos">{{userinf.joke}}</q>
+        </div>
+        <div class="aosl">
+          <div class="inftext">
+            <bdo>Age</bdo>
+            <b name="age">{{user.age}}</b>
+          </div>
+          <div class="inftext">
+            <bdo>Date of Birth</bdo>
+            <b name="dob">{{user.date_of_birth}}</b>
+          </div>
+          <div class="inftext">
+            <bdo>Phone</bdo>
+            <b name="phone">{{user.phone}}</b>
+          </div>
+          <div class="inftext">
+            <bdo>Location</bdo>
+            <b name="location">{{user.address}}</b>
+          </div>
+          <div class="inftext">
+            <bdo>Role</bdo>
+            <b name="role">{{user.role}}</b>
+          </div>
+          <div class="inftext">
+            <bdo>Status</bdo>
+            <b name="status">{{user.status}}</b>
+          </div>
+        </div>
+      </div>
+      <div class="main-bar">
+        <div class="textfield">
+          <div class="inftextmain">
+            <bdo name="name">{{user.name}}</bdo>
+            <bdo name="surname">{{user.surname}}</bdo>
+            <div class="back">
+              <a *ngIf="env.admin" (click)="editmode=!editmode">Edit</a>
+              <a *ngIf="editPos" (click)="saveChanges()">Save</a>
+              <a *ngIf="env.admin" routerLink="/sitepage">AllUsers</a>
+              <a [routerLink]="['/login']" (click)="logOut()">Logout</a>
+            </div>
+          </div>
+          <div class="htext">
+            <b>About</b>
+            <p id="ct2" [contentEditable]="editPos" >{{userinf.about}}</p>
+
+          </div>
+          <div class="inftextmain">
+            <a [routerLink]="['/sitepage', user.id, 'friends']">Friends</a>
+            <a [routerLink]="['/sitepage', user.id, 'friendsnews']">Friends News</a>
+            <a *ngIf="editPos" [routerLink]="['/sitepage', user.id, 'addfriends']">Add Friends</a>
+          </div>
+          <div *ngIf="editmode" class="form-container">
+            <form ngNativeValidate #form>
+              <label>Изменить ФИО</label>
+              <br>
+              <input name="name" type="text" placeholder="Name" [(ngModel)]="user.name" required>
+              <br>
+              <input name="surname" type="text" placeholder="Surname" [(ngModel)]="user.surname"
+                     required>
+              <br>
+              <select name="role" type="text" placeholder="Role" [(ngModel)]="user.role"
+                     required>
+                <option value="Пользователь">Пользователь</option>
+                <option value="Администратор">Администратор</option>
+              </select>
+              <br>
+              <select name="status" type="text" placeholder="Status" [(ngModel)]="user.status"
+                      required>
+                <option value="Не подтвержден">Не подтвержден</option>
+                <option value="Заблокирован">Заблокирован</option>
+                <option value="Активный">Активный</option>
+              </select>
+              <br>
+              <input type="submit" (click)="form.checkValidity()? changeFIO() : null" class="btn btn-info">
+            </form>
+            <form ngNativeValidate #form>
+              <label>Изменить данные</label>
+              <br>
+              <input name="age" type="number" placeholder="Age" [(ngModel)]="user.age" required>
+              <br>
+              <input name="dob" type="date" placeholder="Date of Birth" [(ngModel)]="user.date_of_birth"
+                     required>
+              <br>
+              <input name="location" type="text" placeholder="Address" [(ngModel)]="user.address"
+                      required>
+              <br>
+              <input name="phone" type="number" placeholder="Phone" [(ngModel)]="user.phone"
+                      required>
+              <br>
+              <input type="submit" (click)="form.checkValidity()? changeUserData() : null" class="btn btn-info">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "login": "admin",
+    "pass": "admin"
+  },
+  {
+    "id": 2,
+    "login": "dmitry",
+    "pass": "12"
+  },
+  {
+    "id": 3,
+    "login": "dmitry1",
+    "pass": "123"
+  },
+  {
+    "id": 4,
+    "login": "vyacheslav",
+    "pass": "12345"
+  },
+  {
+    "id": 5,
+    "login": "sergey",
+    "pass": "123456"
+  },
+  {
+    "id": 6,
+    "login": "maksim",
+    "pass": "1234567"
+  },
+  {
+    "id": 7,
+    "login": "aleks",
+    "pass": "12345678"
+  },
+  {
+    "id": 8,
+    "login": "sergey1",
+    "pass": "123456789"
+  },
+  {
+    "id": 9,
+    "login": "sergey2",
+    "pass": "1234567890"
+  },
+  {
+    "id": 10,
+    "login": "ilana",
+    "pass": "2"
+  },
+  {
+    "id": 11,
+    "login": "ksenia",
+    "pass": "23"
+  },
+  {
+    "id": 12,
+    "login": "yulia",
+    "pass": "234"
+  },
+  {
+    "id": 13,
+    "login": "artyom",
+    "pass": "2345"
+  },
+  {
+    "id": 14,
+    "login": "ANALDESTROYER",
+    "pass": "1123"
+  },
+  {
+    "id": 15,
+    "login": "login",
+    "pass": "09"
+  }
+]

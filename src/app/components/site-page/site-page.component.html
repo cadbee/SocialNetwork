@@ -1,0 +1,36 @@
+<html>
+<body>
+<div class="container">
+  <div id="list" class="alert alert-primary" role="alert">
+    <div *ngFor="let user of users; let i = index" id="{{user.id}}" class="logged"
+         [routerLink]="['/sitepage', user.id]">
+      <img src="{{user.img}}">
+      <section id="first_box">
+        <section class="label">
+          <b>Name</b>
+        </section>
+        <p>{{user.name}} {{user.surname}}</p>
+        <section class="label">
+          <b>Date of Birth</b>
+        </section>
+        <p>{{user.date_of_birth}}</p>
+        <section class="label">
+          <b>Phone</b>
+        </section>
+        <p>{{user.phone}}</p>
+      </section>
+      <section id="second_box">
+        <section>
+          <b>Email</b>
+        </section>
+        <p>{{user.email}}</p>
+        <section class="label">
+          <b>Address</b>
+        </section>
+        <p>{{user.address}}</p>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

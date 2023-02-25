@@ -1,0 +1,43 @@
+<html>
+<body>
+  <div class="container">
+    <div style="width: 100%; border-bottom: 5px solid;" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <a class="my-0 mr-md-auto font-weight-normal">New VK</a>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a [routerLink]="['/sitepage', user.id]">Back</a>
+        <a routerLink="/login" (click)="logOut()">Logout</a>
+      </nav>
+    </div>
+    <div id="list">
+      <div *ngFor="let friend_id of friends; let i = index" id="{{users[friend_id-1].id}}" class="logged">
+        <img src="{{users[friend_id-1].img}}" [routerLink]="['/sitepage', users[friend_id-1].id]">
+        <section id="first_box">
+          <section class="label">
+            <b>Name</b>
+          </section>
+          <p>{{users[friend_id - 1].name}} {{users[friend_id - 1].surname}}</p>
+          <section class="label">
+            <b>Date of Birth</b>
+          </section>
+          <p>{{users[friend_id - 1].date_of_birth}}</p>
+          <section class="label">
+            <b>Phone</b>
+          </section>
+          <p>{{users[friend_id - 1].phone}}</p>
+        </section>
+        <section id="second_box">
+          <section>
+            <b>Email</b>
+          </section>
+          <p>{{users[friend_id - 1].email}}</p>
+          <section class="label">
+            <b>Address</b>
+          </section>
+          <p>{{users[friend_id - 1].address}}</p>
+          <button *ngIf="editPos" type="submit" (click)="delFriend(friend_id)" class="mybuttonoverlap btn btn-info">Удалить</button>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

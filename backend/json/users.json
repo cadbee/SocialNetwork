@@ -1,0 +1,306 @@
+[
+  {
+    "id": 1,
+    "name": "Андрей",
+    "surname": "Рожков",
+    "status": "Заблокирован",
+    "phone": 89151321097,
+    "email": "aschiam.net@gmail.com",
+    "img": "https://media.tenor.com/EgwakNGRbQwAAAAC/anime-girl.gif",
+    "age": 192,
+    "friends": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "role": "Администратор",
+    "date_of_birth": "2022-03-07",
+    "address": "Yaroslavl"
+  },
+  {
+    "id": 2,
+    "name": "Дмитрий",
+    "surname": "Соколов",
+    "role": "Администратор",
+    "status": "Заблокирован",
+    "phone": "89431421096",
+    "email": "aschiam.net@gmail.com",
+    "address": "Minsk",
+    "date_of_birth": "1940-03-09",
+    "img": "https://cdn2.thecatapi.com/images/e71.jpg",
+    "age": 86,
+    "friends": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Дмитрий",
+    "surname": "Брекоткин",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": "88881321096",
+    "email": "aschiam.net@gmail.com",
+    "address": "Moscow",
+    "date_of_birth": "2022-06-23",
+    "img": "https://cdn2.thecatapi.com/images/b49.jpg",
+    "age": "22",
+    "friends": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Вячеслав",
+    "surname": "Мясников",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": "89050021996",
+    "email": "aschiam.net@gmail.com",
+    "address": "Tver`",
+    "date_of_birth": "17.04.1989",
+    "img": "https://cdn2.thecatapi.com/images/20e.png",
+    "age": 33,
+    "friends": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Сергей",
+    "surname": "Исаев",
+    "role": "Пользователь",
+    "status": "Заблокирован",
+    "phone": "83331321096",
+    "email": "aschiam.net@gmail.com",
+    "address": "Murmansk",
+    "date_of_birth": "2022-10-07",
+    "img": "https://cdn2.thecatapi.com/images/MTgwOTA2Ng.jpg",
+    "age": "13",
+    "friends": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      8,
+      8
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Максим",
+    "surname": "Ярица",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": "89054221096",
+    "email": "aschiam.net@gmail.com",
+    "address": "Kislovodsk",
+    "date_of_birth": "09.02.2005",
+    "img": "https://cdn2.thecatapi.com/images/nwrkX6GhX.jpg",
+    "age": 17,
+    "friends": [
+      5,
+      11,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Александр",
+    "surname": "Попов",
+    "role": "Пользователь",
+    "status": "Не подтвержден",
+    "phone": "89971221096",
+    "email": "aschiam.net@gmail.com",
+    "address": "Saint-Petersburg",
+    "date_of_birth": "1999-07-12",
+    "img": "https://cdn2.thecatapi.com/images/8to.jpg",
+    "age": "24",
+    "friends": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Сергей",
+    "surname": "Ершов",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": 89971221096,
+    "email": "aschiam.net@gmail.com",
+    "address": "Anapa",
+    "date_of_birth": "07.08.1954",
+    "img": "https://cdn2.thecatapi.com/images/db5.gif",
+    "age": 88,
+    "friends": [
+      5,
+      6,
+      7,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Сергей",
+    "surname": "Калугин",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": 89971221096,
+    "email": "aschiam.net@gmail.com",
+    "address": "Almata",
+    "date_of_birth": "21.01.2000",
+    "img": "https://cdn2.thecatapi.com/images/cgp.jpg",
+    "age": 22,
+    "friends": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Илана",
+    "surname": "Юрьева",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": "89971221096",
+    "email": "aschiam.net@gmail.com",
+    "address": "Samara",
+    "date_of_birth": "1963-04-05",
+    "img": "https://cdn2.thecatapi.com/images/beu.jpg",
+    "age": "56",
+    "friends": [
+      6,
+      7,
+      8,
+      9,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Ксения",
+    "surname": "Корнева",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": "89971221096",
+    "email": "aschiam.net@gmail.com",
+    "address": "Saint-Petersburg",
+    "date_of_birth": "2002-03-04",
+    "img": "https://cdn2.thecatapi.com/images/6e6.jpg",
+    "age": "21",
+    "friends": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Юлия",
+    "surname": "Михалкова",
+    "role": "Пользователь",
+    "status": "Активный",
+    "phone": 89971221096,
+    "email": "aschiam.net@gmail.com",
+    "address": "Moscow",
+    "date_of_birth": "22.02.1995",
+    "img": "https://cdn2.thecatapi.com/images/MTk3NDY2Mg.jpg",
+    "age": 27,
+    "friends": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      1
+    ]
+  },
+  {
+    "name": "Artyom",
+    "surname": "Smirnov",
+    "address": "с. Семёновское, ул.Некрасова",
+    "phone": 89971221096,
+    "age": 1,
+    "date_of_birth": "2022-10-06",
+    "id": 13,
+    "role": "Пользователь",
+    "status": "Не подтвержден",
+    "email": "aschiam.net@gmail.com",
+    "img": "https://cdn2.thecatapi.com/images/dut.jpg",
+    "friends": [
+      12,
+      12,
+      5,
+      8
+    ]
+  },
+  {
+    "name": "Макс",
+    "surname": "Т",
+    "address": "Vladivostok",
+    "phone": 89146999692,
+    "age": 28,
+    "date_of_birth": "2024-10-22",
+    "id": 14,
+    "role": "Пользователь",
+    "status": "Не подтвержден",
+    "email": "abc@gmail.com",
+    "img": "https://placekitten.com/113/225\n",
+    "friends": []
+  },
+  {
+    "name": "Artyom",
+    "surname": "Smirnov",
+    "address": "с. Семёновское",
+    "phone": 89971221096,
+    "age": 12,
+    "date_of_birth": "2022-11-03",
+    "id": 15,
+    "role": "Пользователь",
+    "status": "Не подтвержден",
+    "email": "aschiam.net@gmail.com",
+    "img": "https://placekitten.com/414/400",
+    "friends": [
+      1,
+      1
+    ]
+  }
+]

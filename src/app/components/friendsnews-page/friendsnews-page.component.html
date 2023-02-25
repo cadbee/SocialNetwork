@@ -1,0 +1,29 @@
+<html>
+<body>
+<div class="container">
+  <div style="width: 100%; border-bottom: 5px solid;" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <a class="my-0 mr-md-auto font-weight-normal">New VK</a>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a [routerLink]="['/sitepage', user.id]">Back</a>
+      <a routerLink="/login" (click)="logOut()">Logout</a>
+    </nav>
+  </div>
+  <div id="list">
+    <div *ngFor="let friend_id of user.friends; let i = index" id="{{users[friend_id-1].id}}" class="logged"
+         [routerLink]="['/sitepage', users[friend_id-1].id]">
+      <img src="{{users[friend_id-1].img}}">
+      <section id="first_box">
+        <section class="label">
+          <b>{{users[friend_id - 1].name}} {{users[friend_id - 1].surname}}</b>
+        </section>
+        <section class="news">
+          <p>{{usersinf[friend_id - 1].joke}}</p>
+        </section>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+

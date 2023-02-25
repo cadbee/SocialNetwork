@@ -1,0 +1,46 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<div class="container">
+  <div style="width: 100%; border-bottom: 5px solid;" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <a class="my-0 mr-md-auto font-weight-normal">New VK</a>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <input type="text" placeholder="Search.." [(ngModel)]="searchStr" name="search" required>
+      <button class="search-button" type="submit" (click)="searchPeople()"><i class="fa fa-search"></i></button>
+      <a [routerLink]="['/sitepage', user.id]">Back</a>
+      <a routerLink="/login" (click)="logOut()">Logout</a>
+    </nav>
+  </div>
+  <div id="list" class="alert alert-primary" role="alert">
+    <div *ngFor="let user of people; let i = index" id="{{user.id}}" class="logged">
+      <img src="{{user.img}}" [routerLink]="['/sitepage', user.id]">
+      <section id="first_box">
+        <section class="label">
+          <b>Name</b>
+        </section>
+        <p>{{user.name}} {{user.surname}}</p>
+        <section class="label">
+          <b>Date of Birth</b>
+        </section>
+        <p>{{user.date_of_birth}}</p>
+        <section class="label">
+          <b>Phone</b>
+        </section>
+        <p>{{user.phone}}</p>
+      </section>
+      <section id="second_box">
+        <section>
+          <b>Email</b>
+        </section>
+        <p>{{user.email}}</p>
+        <section class="label">
+          <b>Address</b>
+        </section>
+        <p>{{user.address}}</p>
+        <button *ngIf="!friends.includes(user.id)" type="submit" (click)="addFriend(user.id)" class="btn btn-info">Добавить</button>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

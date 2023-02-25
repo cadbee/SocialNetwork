@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <a class="my-0 mr-md-auto font-weight-normal">New VK</a>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a routerLink="/login">Вход</a>
+    <a routerLink="/register">Регистрация</a>
+  </nav>
+</div>
+<div class="form-container">
+  <div class="form1">
+    <form ngNativeValidate #form>
+      <label>РЕГИСТРАЦИЯ</label>
+      <br>
+      <input name="name" type="text" placeholder="Name" [(ngModel)]="name" autocomplete="off" required>
+      <br>
+      <input name="surname" type="text" placeholder="Surname" [(ngModel)]="surname"
+             autocomplete="off" required>
+      <br>
+      <input name="login" type="text" placeholder="Login" autocomplete="off" [(ngModel)]="login" required>
+      <br>
+      <input name="password" type="text" placeholder="Password" [(ngModel)]="password"
+             autocomplete="off" required>
+      <br>
+      <input name="email" type="text" placeholder="Email" autocomplete="off" [(ngModel)]="email" required>
+      <br>
+      <input name="age" type="number" placeholder="Age" [(ngModel)]="age" autocomplete="off" required>
+      <br>
+      <input name="dob" type="date" placeholder="Date of Birth" [(ngModel)]="date_of_birth"
+             autocomplete="off"  required>
+      <br>
+      <input name="location" type="text" placeholder="Address" [(ngModel)]="address"
+             autocomplete="off" required>
+      <br>
+      <input name="phone" type="number" placeholder="Phone" [(ngModel)]="phone"
+             autocomplete="off"  required>
+      <br>
+      <input type="submit" (click)="form.checkValidity()? add(): null" class="btn btn-info">
+    </form>
+  </div>
+</div>
+</body>
+</html>
