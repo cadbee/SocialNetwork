@@ -5,12 +5,12 @@
     "node": ">=18 <19"
   },
   "scripts": {
-    "server": "node backend/src/index.js",
-    "frontend": "ng serve",
+    "server": "npm install && tsc",
+    "frontend": "ng build --configuration production",
     "service": "npm run server && npm run frontend",
     "ng": "ng",
-    "start": "npm install",
-    "build": "ng build",
+    "start": "node backend/src/index.js",
+    "build": "ng build --configuration production",
     "test": "jest tests/backend.test.js",
     "lint": "ng lint"
   },
