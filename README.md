@@ -1,5 +1,7 @@
 # SocialNetwork
-Node.js, Express and Angular social network application
+Node.js, Express and Angular social network application. 
+
+[DEMO](https://socialnetwork-qeam.onrender.com) `Login: admin Password: admin`
 
 Web-приложение, обеспечивающее использование пользователем социальной сети. Пользователь может зарегистрироваться в социальной сети. Может добавить или удалить свою фотографию, может управлять своими друзьями в социальной сети, может добавить сообщение (новость) на свою страницу, может просматривать список новостей своих друзей.
 
